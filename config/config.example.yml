@@ -91,6 +91,6 @@ notifiers:
   campfire:
     enabled:    true
     subdomain:  'mysubdomain'
-    key:        '6sds45623dcxcb59cbf6482275721d98b4'
+    token:      '6sds45623dcxcb59cbf6482275721d98b4'
     room_name:  'myroom'
 

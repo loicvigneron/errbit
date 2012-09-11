@@ -24,5 +24,3 @@ class Notifier
       end
     end
 end
-
-Notifier.instance
