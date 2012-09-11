@@ -84,3 +84,13 @@ github_access_scope: ['repo']
 #  :user_name:            USERNAME
 #  :password:             PASSWORD
 
+# Configure CAMPFIRE settings if you want to be notified for exceptions arise
+#
+# -------------------------------------------------------------------------
+notifiers:
+  campfire:
+    enabled:    true
+    subdomain:  'mysubdomain'
+    key:        '6sds45623dcxcb59cbf6482275721d98b4'
+    room_name:  'myroom'
+

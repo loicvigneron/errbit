@@ -2,6 +2,9 @@ class NoticeObserver < Mongoid::Observer
   observe :notice
 
   def after_create notice
+    # To Move
+    Notifier.instance.err_notification(notice)
+
     return unless should_notify? notice
 
     Mailer.err_notification(notice).deliver
