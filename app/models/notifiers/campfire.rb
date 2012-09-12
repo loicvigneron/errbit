@@ -5,8 +5,11 @@ class Notifiers::Campfire
   attr_accessor :room, :campfire
 
   def err_notification(notice)
+    hostname    = notice.server_environment["hostname"]
+    environment = notice.server_environment["environment-name"]
+    message     = notice.message
+    room.speak("#{hostname} [ENV: #{environment}] : #{message}")
     room.play("noooo")
-    room.speak("#{notice.host}[#{notice.server_environment}] : #{notice.message}")
   end
 
 
