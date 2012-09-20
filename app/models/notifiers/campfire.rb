@@ -9,7 +9,6 @@ class Notifiers::Campfire
     environment = notice.server_environment["environment-name"]
     message     = notice.message
     room.speak("#{hostname} [ENV: #{environment}] : #{message}")
-    room.play("noooo")
   end
 
 
