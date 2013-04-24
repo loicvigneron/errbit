@@ -8,7 +8,8 @@ class Notifiers::Campfire
     hostname    = notice.server_environment["hostname"]
     environment = notice.server_environment["environment-name"]
     message     = notice.message
-    room.speak("#{hostname} [ENV: #{environment}] : #{message}")
+    app         = notice.app
+    room.speak("#{app.name}(#{environment}): #{message} http://errbit.djengo.me/apps/#{app.id}/errs/#{notice.problem.id}")
   end
 
 
